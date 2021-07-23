@@ -12,5 +12,7 @@ namespace SpaDay.Models
         public string Email { get; set; }
         public string PassWord { get; set; }
 
+        public DateTime DateJoined { get; set; }
+
     }
 }

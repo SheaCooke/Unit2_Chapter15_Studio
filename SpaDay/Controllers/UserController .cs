@@ -32,6 +32,8 @@ namespace SpaDay.Controllers
             {
                 /*ViewBag.didNotMatch = false;*/
                 ViewBag.userName = newUser.UserName;
+                newUser.DateJoined = DateTime.Now;
+                ViewBag.dateJoined = newUser.DateJoined;
                 return View("Index");
             }
             else
@@ -39,7 +41,6 @@ namespace SpaDay.Controllers
                 ViewBag.userName = newUser.UserName;
                 ViewBag.email = newUser.Email;
                 ViewBag.didNotMatch = true;
-                ViewBag.error = "Passwords must match";
                 return View("add");
             }
         }
