@@ -4,18 +4,21 @@
 @{
 }
 
+@using SpaDay.ViewModels;
+@model User 
 
 
-    <h1>Welcome @ViewBag.userName</h1>
+
+    <h1>Welcome @Model.UserName</h1>
     <a href="/spa">Go to spa page</a>
 
 
     <div>
         <br>
         <span class="makeBold">Account details:</span> <br>
-        UserName: @ViewBag.UserName<br>
-        Email: @ViewBag.email<br>
-        Date Joined: @ViewBag.dateJoined
+        UserName: @Model.UserName<br>
+        Email: @Model.Email<br>
+        Date Joined: @Model.DateJoined
     </div>
 
 

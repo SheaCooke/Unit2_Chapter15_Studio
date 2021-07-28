@@ -5,23 +5,27 @@
 }
 <form method='post'>
     Skin type:
-    <br>    
+    <br>
     <select name='skintype'>
-        <option value='oily'>Oily</option>    
-        <option value='combination'>Combination</option>    
-        <option value='normal'>Normal</option>    
-        <option value='dry'>Dry</option>    
+        <option value='oily'>Oily</option>
+        <option value='combination'>Combination</option>
+        <option value='normal'>Normal</option>
+        <option value='dry'>Dry</option>
     </select>
     <br>
 
-    Manicure or Pedicure?
-    <br>    
-    <select name='manipedi'>
-        <option value='manicure'>Manicure</option>    
-        <option value='pedicure'>Pedicure</option>      
-    </select>
-    <br>
-    
-    <input type='submit' value='Submit'>    
-     
+    Manicure and/or Pedicure?<br>
+    @*<br>
+        <select name='manipedi'>
+            <option value='manicure'>Manicure</option>
+            <option value='pedicure'>Pedicure</option>
+        </select>
+        <br>*@
+    <input type="checkbox" name="manicure" value="true">
+    <label for="manicure"> Manicure </label><br>
+    <input type="checkbox" name="pedicure" value="true">
+    <label for="pedicure"> Pedicure </label><br>
+
+    <input type='submit' value='Submit'>
+
 </form>

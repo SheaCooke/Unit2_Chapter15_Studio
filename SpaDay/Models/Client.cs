@@ -7,13 +7,19 @@ namespace SpaDay.Models
     public class Client
     {
         public string SkinType { get; set; }
-        public string NailService { get; set; }
+        /*public string NailService { get; set; }*/
+
+        public bool Manicure { get; set; }
+        public bool Pedicure { get; set; }
+
         private List<string> appropriateFacials = new List<string>();
 
-        public Client(string skinType, string nailService)
+        public Client(string skinType, /*string nailService*/ bool pedicure, bool manicure)
         {
-            SkinType = skinType;
-            NailService = nailService;
+            this.SkinType = skinType;
+            /*NailService = nailService;*/
+            this.Manicure = manicure;
+            this.Pedicure = pedicure;
         }
 
         public List<string> GetFacials()

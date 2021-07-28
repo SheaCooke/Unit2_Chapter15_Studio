@@ -3,28 +3,40 @@
 *@
 @{
 }
+@using SpaDay.ViewModels;
+@model User
 
-<form action="/user" method="POST">
+<form  method="POST">
 
-    @if(ViewBag.didNotMatch)
-            {
-    <p>Passwords must match</p>
-            }
+  
 
-    <label for="userName">Enter your user name.</label>
-        <input type="text" name="UserName" value="@ViewBag.userName"/>
+<div>
+    <label asp-for="UserName">Enter your user name.</label>
+    <input type="text" asp-for="UserName" />
+    <span asp-validation-for="UserName"></span>
+</div>
+    
+<div>
+    <label asp-for="Email">Enter your email.</label>
+    <input type="email" asp-for="Email" />
+    <span asp-validation-for="Email"></span>
+</div>
+    
+<div>
+    <label asp-for="PassWord">Enter your password.</label>
+    <input type="password" asp-for="PassWord" />
+    <span asp-validation-for="PassWord"></span>
+</div>
+   
+<div>
+    <label asp-for="VerifyPassword">Verify your password.</label>
+    <input type="password" asp-for="VerifyPassword" />
+    <span asp-validation-for="VerifyPassword"></span>
+</div>
+   
 
-        <label for="email">Enter your email.</label>
-            <input type="email" name="Email" value="@ViewBag.email" />
-       
-            <label for="passWord">Enter your password.</label>
-            <input type="password" name="PassWord" />
-        
-            <label for="verify">Verify your password.</label>
-            <input type="password" name="verify" />
+    <input type="submit" value="Submit" />
 
-           <input type="submit" value="Submit" />
-       
 
 
 </form>
