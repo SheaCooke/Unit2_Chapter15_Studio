@@ -17,9 +17,10 @@ namespace SpaDay.Controllers
         }
 
         public IActionResult Add()
-        { 
+        {
+            AddUserViewModel newobj = new AddUserViewModel();
             
-            return View();
+            return View(newobj);
         }
 
 
